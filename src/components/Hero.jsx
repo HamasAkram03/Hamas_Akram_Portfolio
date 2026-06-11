@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import profileImage from '../assets/about/Rectangle 38.png';
+import desktopHomeImage from '../assets/about/Rectangle 38.png';
+import mobileHomeImage from '../assets/about/WhatsApp Image 2026-06-11 at 17.00.59.jpeg';
 
 const Hero = () => {
 
@@ -15,12 +16,12 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden bg-[#ff2a2a]">
-      {/* Homepage profile photo background */}
+      {/* Homepage profile photo background - Mobile responsive */}
       <picture className="absolute inset-0 w-full h-full z-0">
-        <source media="(min-width: 768px)" srcSet={profileImage} />
-        <source media="(max-width: 767px)" srcSet={profileImage} />
+        <source media="(min-width: 768px)" srcSet={desktopHomeImage} />
+        <source media="(max-width: 767px)" srcSet={mobileHomeImage} />
         <img
-          src={profileImage}
+          src={desktopHomeImage}
           alt="Hamas Akram"
           className="w-full h-full object-cover object-center"
         />
