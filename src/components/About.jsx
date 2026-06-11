@@ -9,213 +9,106 @@ import htmlCssImage from '../assets/about/html5-01-svgrepo-com.svg';
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="bg-[#F52222] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans"
-    >
-      {/* Background Glow Effects */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-black/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-3xl"></div>
+    <>
+      <section
+        id="about"
+        className="bg-[#F52222] pt-12 pb-16 px-4 w-full relative overflow-hidden font-sans"
+      >
+        {/* Background Glow Effects - hidden on mobile, visible on larger screens */}
+        <div className="hidden md:block absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-black/10 rounded-full blur-3xl"></div>
+        <div className="hidden md:block absolute bottom-0 left-0 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-white/10 rounded-full blur-3xl"></div>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-24 items-center">
-        
-        {/* Left Side: ID Badge */}
-        <div className="flex flex-col items-center w-full md:w-[450px] lg:w-[500px] shrink-0 mt-12 md:mt-0">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-24 items-center">
           
-          <div data-aos="drop-bounce" className="relative flex justify-center w-full">
+          {/* Left Side: ID Badge - Mobile First */}
+          <div className="flex flex-col items-center w-full md:w-[400px] lg:w-[500px] shrink-0 mt-4 md:mt-0">
             
-            {/* Lanyard String */}
-            <div className="absolute -top-32 left-1/2 w-3 h-40 bg-black transform -translate-x-1/2 shadow-inner z-0"></div>
-
-            {/* Lanyard Clip */}
-            <div className="absolute -top-6 left-1/2 w-6 h-12 bg-gray-300 rounded border border-gray-400 transform -translate-x-1/2 z-10 shadow-[0_2px_10px_rgba(0,0,0,0.3)]"></div>
-
-            {/* Badge Card */}
-            <div className="bg-gray-900 w-full max-w-[420px] rounded-3xl p-4 shadow-[0_25px_50px_rgba(0,0,0,0.45)] relative z-20 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="relative flex justify-center w-full">
               
-              {/* Cutout Hole */}
-              <div className="absolute -top-3 left-1/2 w-16 h-6 bg-gray-900 rounded-t-xl transform -translate-x-1/2 flex justify-center items-center">
-                <div className="w-8 h-2 bg-black/30 rounded-full shadow-inner"></div>
-              </div>
+              {/* Lanyard String */}
+              <div className="absolute -top-16 md:-top-28 left-1/2 w-1.5 md:w-2.5 h-24 md:h-36 bg-black transform -translate-x-1/2 shadow-inner z-0"></div>
 
-              {/* Profile Image */}
-              <div className="w-full h-[700px] lg:h-[650px] overflow-hidden rounded-2xl bg-gray-800 border-2 border-transparent">
-                <img
-                  src={profileImage}
-                  alt="Hamas Akram - Profile"
-                  className="w-full h-full object-cover"
-                />
+              {/* Lanyard Clip */}
+              <div className="absolute -top-3 md:-top-5 left-1/2 w-4 md:w-5 h-6 md:h-10 bg-gray-300 rounded border border-gray-400 transform -translate-x-1/2 z-10 shadow-md"></div>
+
+              {/* Badge Card */}
+              <div className="bg-gray-900 w-full max-w-[320px] sm:max-w-[360px] md:max-w-[420px] rounded-2xl md:rounded-3xl p-3 shadow-2xl relative z-20 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+                
+                {/* Cutout Hole */}
+                <div className="absolute -top-2.5 left-1/2 w-12 sm:w-14 md:w-16 h-4 sm:h-5 md:h-6 bg-gray-900 rounded-t-xl transform -translate-x-1/2 flex justify-center items-center">
+                  <div className="w-5 sm:w-6 md:w-8 h-1.5 bg-black/30 rounded-full shadow-inner"></div>
+                </div>
+
+                {/* Profile Image */}
+                <div className="w-full h-[380px] sm:h-[440px] md:h-[520px] lg:h-[600px] overflow-hidden rounded-xl md:rounded-2xl bg-gray-800">
+                  <img
+                    src={profileImage}
+                    alt="Hamas Akram - Profile"
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
               </div>
+            </div>
+          </div>
+
+          {/* Right Side Content */}
+          <div className="flex-1 text-white text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-3 md:mb-4">
+              Hello! 👋
+            </h2>
+
+            <p className="text-base sm:text-lg md:text-xl font-bold mb-4 md:mb-6 leading-relaxed text-red-50">
+              I'm{' '}
+              <span className="text-black text-lg sm:text-xl md:text-2xl font-black inline-block mx-1 tracking-wide uppercase">
+                Hamas Akram
+              </span>
+              , an NDT IT student at the University of Moratuwa, Sri Lanka.
+            </p>
+
+            <p className="text-sm sm:text-base md:text-lg font-medium mb-4 md:mb-6 leading-relaxed text-red-50">
+              Alongside my studies, I run a small online business called{' '}
+              <span className="text-black font-black">Topbins</span>.
+            </p>
+
+            <p className="text-sm sm:text-base md:text-lg font-medium mb-6 md:mb-8 leading-relaxed text-red-50">
+              My toolkit includes HTML, CSS, Java, Python, Spring Boot, React,
+              Node.js, and MongoDB.
+            </p>
+
+            {/* Skills Icons - Responsive Grid */}
+            <div className="grid grid-cols-4 sm:flex sm:flex-wrap gap-3 sm:gap-4 md:gap-5 lg:gap-6 justify-items-center sm:justify-start">
+              {[
+                { src: javaImage, alt: "Java" },
+                { src: pythonImage, alt: "Python" },
+                { src: springbootImage, alt: "Spring Boot" },
+                { src: htmlCssImage, alt: "HTML/CSS" },
+                { src: reactImage, alt: "React" },
+                { src: JavaScript, alt: "JavaScript" },
+                { src: mongoImage, alt: "MongoDB" }
+              ].map((skill, index) => (
+                <img
+                  key={index}
+                  src={skill.src}
+                  alt={skill.alt}
+                  className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain hover:scale-110 transition-transform duration-300 cursor-pointer drop-shadow-md"
+                />
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Right Side Content */}
-        <div
-          data-aos="fade-left"
-          data-aos-delay="200"
-          className="flex-1 max-w-4xl text-white mt-8 md:mt-0 relative z-20"
-        >
-          <h2 className="text-4xl md:text-6xl font-black text-black mb-6">
-            Hello! 👋
-          </h2>
-
-          <p className="text-lg md:text-xl font-bold mb-8 leading-relaxed text-red-50">
-            I'm{' '}
-            <span className="text-black text-xl md:text-2xl font-black mx-1 tracking-wide uppercase">
-              Hamas Akram
-            </span>
-            , an NDT IT student at the University of Moratuwa, Sri Lanka. I am
-            building my foundation in software development with a focus on web
-            technologies and programming fundamentals.
-          </p>
-
-          <p className="text-base md:text-lg font-medium mb-8 leading-relaxed text-red-50">
-            Alongside my studies, I run a small online business called{' '}
-            <span className="text-black font-black">Topbins</span>, where I sell
-            football retro and premium jerseys. Through this venture, I have
-            gained hands-on experience managing customers, online listings, and
-            real buying behavior.
-          </p>
-
-          <p className="text-base md:text-lg font-medium mb-10 leading-relaxed text-red-50">
-            I am continuously learning and improving my technical skills step by
-            step. My toolkit includes HTML, CSS, Java, Python, Spring Boot,
-            React, Node.js, and MongoDB. I enjoy building projects and turning
-            ideas into working systems, with a goal of growing as a{' '}
-            <span className="text-black font-black">
-              Full Stack Developer
-            </span>{' '}
-            while expanding my experience in digital business.
-          </p>
-
-          {/* Skills Icons */}
-          <div className="flex items-center gap-6 md:gap-8 mt-8 flex-wrap justify-start">
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              src={javaImage}
-              alt="Java"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-105 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="350"
-              src={pythonImage}
-              alt="Python"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-105 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="400"
-              src={springbootImage}
-              alt="Spring Boot"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-105 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="450"
-              src={htmlCssImage}
-              alt="HTML & CSS"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-105 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="500"
-              src={reactImage}
-              alt="React"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-105 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="550"
-              src={JavaScript}
-              alt="JavaScript"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-105 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-
-            <img
-              data-aos="zoom-in"
-              data-aos-delay="600"
-              src={mongoImage}
-              alt="MongoDB"
-              className="w-20 h-20 md:w-24 md:h-24 object-contain hover:scale-105 transition-transform duration-300 cursor-pointer drop-shadow-2xl"
-            />
-          </div>
-
-          {/* Skill Tags */}
-          <div className="mt-8 flex flex-wrap gap-3">
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              E-commerce Management
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              Customer Relations
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              Java
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              Python
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              Spring Boot
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              HTML/CSS
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              React
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              Node.js
-            </span>
-
-            <span className="px-4 py-2 bg-black/30 rounded-full text-sm font-medium backdrop-blur-sm">
-              MongoDB
-            </span>
-          </div>
+        {/* Torn Paper Divider */}
+        <div className="absolute bottom-0 left-0 w-full pointer-events-none z-30 transform translate-y-0.5">
+          <svg
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="w-full h-8 sm:h-10 md:h-16 lg:h-20 fill-white"
+          >
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.62,189.5,99.8,242.79,81.82,282.88,63.6,321.39,56.44Z"></path>
+          </svg>
         </div>
-      </div>
-
-      {/* Torn Paper Divider */}
-      <div className="absolute bottom-0 left-0 w-full pointer-events-none z-30 transform translate-y-1">
-        <svg
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-          className="w-full h-12 md:h-20 fill-white"
-        >
-          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.62,189.5,99.8,242.79,81.82,282.88,63.6,321.39,56.44Z"></path>
-        </svg>
-      </div>
-
-      {/* Decorative Stars */}
-      <div className="absolute top-10 right-10 md:right-20 text-black opacity-30 animate-pulse">
-        <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z" />
-        </svg>
-      </div>
-
-      <div
-        className="absolute bottom-32 left-4 md:left-20 text-black opacity-30 animate-pulse"
-        style={{ animationDelay: '1s' }}
-      >
-        <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z" />
-        </svg>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
