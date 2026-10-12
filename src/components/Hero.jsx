@@ -15,7 +15,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative w-full h-screen overflow-hidden bg-[#ff2a2a]">
+    <section id="home" className="relative w-full h-screen min-h-[100svh] overflow-hidden bg-[#ff2a2a]">
       {/* Homepage profile photo background - Mobile responsive */}
       <picture className="absolute inset-0 w-full h-full z-0">
         <source media="(min-width: 768px)" srcSet={desktopHomeImage} />
@@ -28,16 +28,18 @@ const Hero = () => {
       </picture>
 
       {/* Content Container */}
-      <div className="absolute inset-0 z-20 px-6 pb-20 md:pb-[8%] md:px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-end md:justify-between items-start md:items-end text-left w-full">
+      <div className="absolute inset-0 z-20 px-6 pt-28 pb-10 md:px-12 md:pt-32 md:pb-10 max-w-7xl mx-auto flex flex-col justify-center md:flex-row md:justify-between items-start md:items-end text-left w-full">
         
         {/* Left Side: Text and Buttons */}
-        <div className="flex flex-col items-start text-left max-w-2xl w-full">
+        <div className="flex flex-col items-start text-left w-full md:w-[58%]">
           {/* Main Heading */}
           <h1 
             data-aos="fade-up"
-            className="text-white text-4xl md:text-6xl font-bold mb-4 tracking-tight"
+            className="text-white text-[clamp(2.25rem,5vw,4.5rem)] leading-[0.98] font-bold mb-4 tracking-tight"
           >
-            Hi, I'm <span className="text-transparent [-webkit-text-stroke:1.5px_white]">Hamas Akram</span> <br /> <span className="text-white">IT Student & Entrepreneur</span>
+            <span className="block">Hi, I'm</span>
+            <span className="block text-transparent [-webkit-text-stroke:1.5px_white]">Hamas Akram</span>
+            <span className="block">IT Student &amp; Entrepreneur</span>
           </h1>
 
           {/* Subheading */}
@@ -73,12 +75,8 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div 
-        data-aos="fade-up"
-        data-aos-delay="800"
-        className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none"
-      >
-        <div className="animate-bounce">
+      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <a href="#about" aria-label="Scroll to About section" className="block p-3 rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-white">
           <svg 
             className="w-6 h-6 text-black drop-shadow-[0_1px_2px_rgba(255,255,255,0.6)]" 
             fill="none" 
@@ -90,7 +88,7 @@ const Hero = () => {
           >
             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
-        </div>
+        </a>
       </div>
     </section>
   );

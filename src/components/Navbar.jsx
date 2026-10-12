@@ -29,11 +29,11 @@ const Navbar = () => {
             : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
         
         {/* Left Side: Logo/Name */}
         <div className="flex items-center">
-          <a href="#home" className="text-white text-3xl md:text-4xl font-black tracking-tight">
+          <a href="#home" className="text-white text-xl sm:text-2xl md:text-4xl font-black tracking-tight">
             Hamas Akram<span className="text-red-500">.</span>
           </a>
         </div>
