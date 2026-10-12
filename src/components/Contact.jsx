@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Contact = () => {
@@ -44,6 +44,9 @@ const Contact = () => {
             </p>
             <p>
               GitHub: <a href="https://github.com/HamasAkram03" target="_blank" rel="noreferrer" className="underline hover:text-white">HamasAkram03</a>
+            </p>
+            <p>
+              LinkedIn: <a href="https://www.linkedin.com/in/hamas-akram-379a78241" target="_blank" rel="noreferrer" className="underline hover:text-white">Hamas Akram</a>
             </p>
           </div>
 

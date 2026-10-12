@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -114,6 +114,15 @@ const Navbar = () => {
                className="inline-block px-6 py-3 rounded-full bg-white/10 text-white border border-white/20 font-black hover:bg-white hover:text-[#ff2a2a] transition-colors w-full text-center shadow-lg"
              >
                GitHub
+             </a>
+             <a 
+               href="https://www.linkedin.com/in/hamas-akram-379a78241" 
+               target="_blank" 
+               rel="noreferrer"
+               onClick={() => setIsOpen(false)} 
+               className="inline-block px-6 py-3 rounded-full bg-white/10 text-white border border-white/20 font-black hover:bg-white hover:text-[#ff2a2a] transition-colors w-full text-center shadow-lg"
+             >
+               LinkedIn
              </a>
              <a 
                href="#contact" 

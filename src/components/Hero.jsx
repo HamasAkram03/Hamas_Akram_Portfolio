@@ -64,6 +64,9 @@ const Hero = () => {
             <a href="https://github.com/HamasAkram03" target="_blank" rel="noreferrer" className="inline-flex px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-black/40 border border-white text-white font-semibold hover:bg-black/60 transition-all duration-300 backdrop-blur-md">
               GitHub
             </a>
+            <a href="https://www.linkedin.com/in/hamas-akram-379a78241" target="_blank" rel="noreferrer" className="inline-flex px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-black/40 border border-white text-white font-semibold hover:bg-black/60 transition-all duration-300 backdrop-blur-md">
+              LinkedIn
+            </a>
           </div>
         </div>
 

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   return (
     <footer className="bg-[#111111] text-[#d4d4d4] py-16 px-6 md:px-12 w-full font-mono text-[10px] md:text-xs tracking-widest flex flex-col justify-between min-h-[50vh]">
@@ -43,6 +41,7 @@ const Footer = () => {
           <a href="mailto:hamasakram2003@gmail.com" className="underline hover:text-white transition-colors underline-offset-4 decoration-1 lowercase">hamasakram2003@gmail.com</a>
           <a href="tel:+94770795463" className="underline hover:text-white transition-colors underline-offset-4 decoration-1">+94770795463</a>
           <a href="https://github.com/HamasAkram03" target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors underline-offset-4 decoration-1">GitHub</a>
+          <a href="https://www.linkedin.com/in/hamas-akram-379a78241" target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors underline-offset-4 decoration-1">LinkedIn</a>
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">
