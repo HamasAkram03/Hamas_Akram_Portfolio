@@ -17,7 +17,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Services', 'Contact'];
+  const navLinks = ['Home', 'About', 'Education', 'Services', 'Contact'];
 
   return (
     <nav 
@@ -33,7 +33,8 @@ const Navbar = () => {
         
         {/* Left Side: Logo/Name */}
         <div className="flex items-center">
-          <a href="#home" className="text-white text-xl sm:text-2xl md:text-4xl font-black tracking-tight">
+          <a href="#home" aria-label="Hamas Akram home" className="flex items-center gap-2 text-white text-xl sm:text-2xl md:text-4xl font-black tracking-tight">
+            <img src="/favicon.svg" alt="" className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 shrink-0" />
             Hamas Akram<span className="text-red-500">.</span>
           </a>
         </div>
@@ -91,7 +92,7 @@ const Navbar = () => {
       {/* Mobile Slide-Down Menu */}
       <div 
         className={`md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 py-4 opacity-100 bg-[#ff2a2a] shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
+          isOpen ? 'max-h-[32rem] py-4 opacity-100 bg-[#ff2a2a] shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
         }`}
       >
         <div className="flex flex-col px-6 space-y-4">

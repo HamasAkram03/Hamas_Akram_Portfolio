@@ -8,13 +8,14 @@ This repository contains a personal portfolio website built with React, Vite, an
 - **Bundler:** Vite
 - **Styling:** Tailwind CSS
 - **Animations:** AOS (Animate on Scroll), Framer Motion
-- **Purpose:** Personal portfolio website with sections for Home, About, Services, and Contact.
+- **Purpose:** Personal portfolio website with sections for Home, About, Education, Services, and Contact.
 
 ## Key Features
 
 - Responsive hero section with a personal profile photo
 - Smooth navigation and section anchor links
 - About section with profile description and skill badges
+- Education section highlighting current NDT in Information Technology studies at the University of Moratuwa
 - Service cards for offering user-friendly digital services
 - Contact section with visible email and phone details
 - Clean modern UI with responsive layout and user interactions
@@ -24,6 +25,7 @@ This repository contains a personal portfolio website built with React, Vite, an
 - `src/components/`: React components used across the portfolio
   - `Hero.jsx`
   - `About.jsx`
+  - `Education.jsx`
   - `Services.jsx`
   - `Contact.jsx`
   - `Navbar.jsx`
