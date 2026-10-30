@@ -24,25 +24,51 @@ const Preloader = () => {
           transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 w-full h-screen bg-[#F52222] z-[100000] flex items-center justify-center"
         >
-          {/* Logo Container */}
+          {/* Logo & Name Container - CSS Grid stacking ensures 100% identical position */}
           <motion.div 
             exit={{ opacity: 0, scale: 0.95, y: -20 }}
             transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative text-5xl md:text-7xl font-black tracking-tighter"
+            className="grid place-items-center px-4"
           >
-            {/* Background text (empty state) */}
-            <div className="text-red-900/30">
-              Hamas Akram<span className="text-red-900/30">.</span>
+            {/* Background Shadow Silhouette Layer */}
+            <div className="col-start-1 row-start-1 flex items-center gap-2.5 sm:gap-3.5 md:gap-4 select-none pointer-events-none">
+              {/* Shadow Logo */}
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 450 320" 
+                className="h-8 sm:h-11 md:h-15 w-auto fill-red-950/35 shrink-0"
+              >
+                <path d="M0 46 55 0v115h126l-31 50H55v102L0 312z"/>
+                <path d="m257 0 188 310h-61l-40-69H214l29-49h73l-59-99-27 46-58 20z"/>
+                <path d="m87 194 176-64-109 180H94l80-125z"/>
+              </svg>
+              {/* Shadow Text */}
+              <span className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter text-red-950/35">
+                Hamas Akram<span>.</span>
+              </span>
             </div>
 
-            {/* Foreground text (water fill state) */}
+            {/* Foreground Fill Layer - Exact same cell, pixel-for-pixel alignment */}
             <motion.div 
-              className="absolute top-0 left-0 text-white overflow-hidden whitespace-nowrap"
+              className="col-start-1 row-start-1 flex items-center gap-2.5 sm:gap-3.5 md:gap-4 overflow-hidden whitespace-nowrap select-none"
               initial={{ clipPath: 'inset(100% 0 0 0)' }}
               animate={{ clipPath: 'inset(0% 0 0 0)' }}
               transition={{ duration: 1.6, ease: "easeInOut", delay: 0.2 }}
             >
-              Hamas Akram<span className="text-black">.</span>
+              {/* Black Logo */}
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 450 320" 
+                className="h-8 sm:h-11 md:h-15 w-auto fill-black shrink-0"
+              >
+                <path d="M0 46 55 0v115h126l-31 50H55v102L0 312z"/>
+                <path d="m257 0 188 310h-61l-40-69H214l29-49h73l-59-99-27 46-58 20z"/>
+                <path d="m87 194 176-64-109 180H94l80-125z"/>
+              </svg>
+              {/* White Text with Black Dot */}
+              <span className="text-4xl sm:text-6xl md:text-7xl font-black tracking-tighter text-white">
+                Hamas Akram<span className="text-black">.</span>
+              </span>
             </motion.div>
           </motion.div>
 

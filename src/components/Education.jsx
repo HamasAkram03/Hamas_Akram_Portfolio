@@ -53,6 +53,47 @@ const Education = () => {
             through academic learning and hands-on projects.
           </p>
         </article>
+
+        <div className="mt-16">
+          <h3 className="text-3xl md:text-4xl font-black text-gray-900 tracking-tight mb-8">
+            Professional Certificates
+          </h3>
+          <div className="grid gap-5 md:grid-cols-2 max-w-5xl">
+            <article className="border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-[0_15px_40px_rgba(0,0,0,0.06)]">
+              <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
+                <div>
+                  <h4 className="text-xl sm:text-2xl font-black text-gray-900 mb-2">
+                    AI/ML Engineer - Stage 1
+                  </h4>
+                  <p className="text-lg font-semibold text-gray-700">
+                    SLIIT University
+                  </p>
+                </div>
+                <span className="rounded-full border border-green-200 bg-green-50 px-5 py-2.5 text-sm font-semibold text-green-700">
+                  Completed
+                </span>
+              </div>
+              <p className="text-sm font-semibold text-gray-500">2026</p>
+            </article>
+
+            <article className="border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-[0_15px_40px_rgba(0,0,0,0.06)]">
+              <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
+                <div>
+                  <h4 className="text-xl sm:text-2xl font-black text-gray-900 mb-2">
+                    Python for Beginners
+                  </h4>
+                  <p className="text-lg font-semibold text-gray-700">
+                    University of Moratuwa
+                  </p>
+                </div>
+                <span className="rounded-full border border-green-200 bg-green-50 px-5 py-2.5 text-sm font-semibold text-green-700">
+                  Completed
+                </span>
+              </div>
+              <p className="text-sm font-semibold text-gray-500">2025</p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
   );

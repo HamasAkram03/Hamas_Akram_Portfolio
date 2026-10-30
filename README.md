@@ -15,7 +15,7 @@ This repository contains a personal portfolio website built with React, Vite, an
 - Responsive hero section with a personal profile photo
 - Smooth navigation and section anchor links
 - About section with profile description and skill badges
-- Education section highlighting current NDT in Information Technology studies at the University of Moratuwa
+- Education section highlighting current NDT in Information Technology studies and professional certificates
 - Service cards for offering user-friendly digital services
 - Contact section with visible email and phone details
 - Clean modern UI with responsive layout and user interactions

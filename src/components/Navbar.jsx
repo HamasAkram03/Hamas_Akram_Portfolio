@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLightSection, setIsLightSection] = useState(false);
 
-  // Handle scroll to make navbar more solid
+  // Handle scroll to check scroll state and detect if navbar is over a light/white section
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -12,20 +13,66 @@ const Navbar = () => {
       } else {
         setIsScrolled(false);
       }
+
+      // Check which section is currently behind the navbar (~50px from top)
+      const sections = document.querySelectorAll('section, footer');
+      let isLight = false;
+
+      for (const section of sections) {
+        const rect = section.getBoundingClientRect();
+        // Check if section spans across the navbar's vertical point (y = 50px)
+        if (rect.top <= 50 && rect.bottom > 50) {
+          // Explicit check for known white sections
+          if (section.id === 'education' || section.id === 'services') {
+            isLight = true;
+            break;
+          }
+
+          // General check for light background via computed style
+          const bg = window.getComputedStyle(section).backgroundColor;
+          const match = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+          if (match) {
+            const r = parseInt(match[1], 10);
+            const g = parseInt(match[2], 10);
+            const b = parseInt(match[3], 10);
+            const brightness = (r * 299 + g * 587 + b * 114) / 1000;
+            if (brightness > 180) {
+              isLight = true;
+              break;
+            }
+          }
+        }
+      }
+
+      setIsLightSection(isLight);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll, { passive: true });
+
+    // Initial check on mount
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   const navLinks = ['Home', 'About', 'Education', 'Services', 'Contact'];
+
+  // Text turns black when over a white/light section (unless mobile menu is open with red background)
+  const isDarkText = isLightSection && !isOpen;
 
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isOpen 
-          ? 'bg-[#ff2a2a] py-4'
+          ? 'bg-[#ff2a2a] py-4 shadow-lg'
           : isScrolled 
-            ? 'bg-transparent py-4' 
+            ? isLightSection 
+              ? 'bg-white/80 backdrop-blur-md shadow-sm border-b border-black/5 py-4' 
+              : 'bg-black/20 backdrop-blur-md border-b border-white/10 py-4'
             : 'bg-transparent py-6'
       }`}
     >
@@ -33,7 +80,13 @@ const Navbar = () => {
         
         {/* Left Side: Logo/Name */}
         <div className="flex items-center">
-          <a href="#home" aria-label="Hamas Akram home" className="flex items-center gap-2 text-white text-xl sm:text-2xl md:text-4xl font-black tracking-tight">
+          <a 
+            href="#home" 
+            aria-label="Hamas Akram home" 
+            className={`flex items-center gap-2 text-xl sm:text-2xl md:text-4xl font-black tracking-tight transition-colors duration-300 ${
+              isDarkText ? 'text-black' : 'text-white'
+            }`}
+          >
             <img src="/favicon.svg" alt="" className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 shrink-0" />
             Hamas Akram<span className="text-red-500">.</span>
           </a>
@@ -45,7 +98,11 @@ const Navbar = () => {
             <a 
               key={link} 
               href={`#${link.toLowerCase()}`}
-              className="text-white/80 hover:text-white font-medium relative group transition-colors duration-300"
+              className={`font-semibold relative group transition-colors duration-300 ${
+                isDarkText 
+                  ? 'text-black/80 hover:text-black' 
+                  : 'text-white/80 hover:text-white'
+              }`}
             >
               {link}
               {/* Smooth hover underline */}
@@ -56,17 +113,13 @@ const Navbar = () => {
 
         {/* Right Side: CTA Buttons */}
         <div className="hidden md:flex items-center gap-4">
-          {/*<a 
-            href="https://github.com/HamasAkram03" 
-            target="_blank" 
-            rel="noreferrer"
-            className="px-5 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md"
-          >
-            GitHub
-          </a>*/}
           <a 
             href="#contact" 
-            className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md"
+            className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 backdrop-blur-md ${
+              isDarkText
+                ? 'bg-black/5 border border-black/20 text-black hover:bg-black/10 hover:shadow-[0_0_15px_rgba(0,0,0,0.1)]'
+                : 'bg-white/10 border border-white/20 text-white hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+            }`}
           >
             Hire Me
           </a>
@@ -76,7 +129,10 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none p-2"
+            aria-label="Toggle Navigation Menu"
+            className={`focus:outline-none p-2 transition-colors duration-300 ${
+              isOpen ? 'text-white' : isDarkText ? 'text-black' : 'text-white'
+            }`}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
