@@ -50,8 +50,8 @@ const Contact = () => {
     >
       {/* Background Ambience: Subtle Red Glows & Dot Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none opacity-60" />
-      <div className="absolute -top-32 left-1/4 w-[500px] h-[300px] bg-[#ff2a2a]/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#ff2a2a]/10 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute -top-32 left-1/4 w-[500px] h-[300px] bg-[#F9161D]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-[#F9161D]/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-6xl w-full mx-auto relative z-10">
         
@@ -62,7 +62,7 @@ const Contact = () => {
           </div>
           
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.08]">
-            Let's create something together<span className="text-[#ff2a2a]">.</span>
+            Let's create something together<span className="text-[#F9161D]">.</span>
           </h2>
           
           <p className="text-zinc-400 text-sm sm:text-base md:text-lg max-w-2xl mt-4 leading-relaxed">
@@ -76,7 +76,7 @@ const Contact = () => {
           {/* LEFT: Project Proposal & Inquiry Form */}
           <div className="lg:col-span-7 bg-[#141416]/90 border border-zinc-800/90 rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] backdrop-blur-xl relative overflow-hidden">
             {/* Top red accent glow line */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#ff2a2a] to-transparent" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#F9161D] to-transparent" />
 
             {submitted ? (
               <div className="min-h-[460px] flex flex-col items-center justify-center text-center p-8">
@@ -119,7 +119,7 @@ const Contact = () => {
                           }}
                           className={`text-xs font-bold px-3.5 py-2 rounded-xl transition-all duration-200 cursor-pointer ${
                             isActive
-                              ? 'bg-[#ff2a2a] text-white shadow-[0_0_15px_rgba(255,42,42,0.4)]'
+                              ? 'bg-[#F9161D] text-white shadow-[0_0_15px_rgba(249,22,29,0.4)]'
                               : 'bg-zinc-900/90 text-zinc-400 border border-zinc-800 hover:border-zinc-600 hover:text-white'
                           }`}
                         >
@@ -134,7 +134,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                   <div className="flex flex-col gap-2">
                     <label htmlFor="name-input" className="text-xs uppercase tracking-wider font-bold text-zinc-400">
-                      Your Name <span className="text-[#ff2a2a]">*</span>
+                      Your Name <span className="text-[#F9161D]">*</span>
                     </label>
                     <input 
                       id="name-input"
@@ -149,7 +149,7 @@ const Contact = () => {
 
                   <div className="flex flex-col gap-2">
                     <label htmlFor="email-input" className="text-xs uppercase tracking-wider font-bold text-zinc-400">
-                      Your Email <span className="text-[#ff2a2a]">*</span>
+                      Your Email <span className="text-[#F9161D]">*</span>
                     </label>
                     <input 
                       id="email-input"
@@ -166,7 +166,7 @@ const Contact = () => {
                 {/* Step 3: Message */}
                 <div className="flex flex-col gap-2">
                   <label htmlFor="message-input" className="text-xs uppercase tracking-wider font-bold text-zinc-400">
-                    Project Details / Message <span className="text-[#ff2a2a]">*</span>
+                    Project Details / Message <span className="text-[#F9161D]">*</span>
                   </label>
                   <textarea 
                     id="message-input"
@@ -183,7 +183,7 @@ const Contact = () => {
                 <div className="pt-2">
                   <button 
                     type="submit" 
-                    className="w-full group bg-gradient-to-r from-[#ff2a2a] via-[#f02222] to-[#d61818] text-white font-black text-sm sm:text-base py-4 px-8 rounded-2xl hover:shadow-[0_12px_35px_rgba(255,42,42,0.45)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 cursor-pointer flex items-center justify-center gap-3"
+                    className="w-full group bg-gradient-to-r from-[#F9161D] via-[#F9161D] to-[#F9161D] text-white font-black text-sm sm:text-base py-4 px-8 rounded-2xl hover:shadow-[0_12px_35px_rgba(249,22,29,0.45)] hover:scale-[1.01] active:scale-[0.99] transition-all duration-200 cursor-pointer flex items-center justify-center gap-3"
                   >
                     <span>Send Message</span>
                     <svg className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -15,7 +15,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative w-full h-screen min-h-[100svh] overflow-hidden bg-[#ff2a2a]">
+    <section id="home" className="relative w-full h-screen min-h-[100svh] overflow-hidden bg-[#F9161D]">
       {/* Homepage profile photo background - Mobile responsive */}
       <picture className="absolute inset-0 w-full h-full z-0">
         <source media="(min-width: 768px)" srcSet={desktopHomeImage} />

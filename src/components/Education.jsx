@@ -14,7 +14,7 @@ const Education = () => {
         </h2>
 
         <article className="relative max-w-4xl border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-[0_15px_40px_rgba(0,0,0,0.06)]">
-          <div className="absolute left-0 top-8 bottom-8 w-1 rounded-r-full bg-[#ff2a2a]" />
+          <div className="absolute left-0 top-8 bottom-8 w-1 rounded-r-full bg-[#F9161D]" />
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
             <div>
               <h3 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2">

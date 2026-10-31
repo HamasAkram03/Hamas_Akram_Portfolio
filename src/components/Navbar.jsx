@@ -68,7 +68,7 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isOpen 
-          ? 'bg-[#ff2a2a] py-4 shadow-lg'
+          ? 'bg-[#F9161D] py-4 shadow-lg'
           : isScrolled 
             ? isLightSection 
               ? 'bg-white/80 backdrop-blur-md shadow-sm border-b border-black/5 py-4' 
@@ -88,7 +88,7 @@ const Navbar = () => {
             }`}
           >
             <img src="/favicon.svg" alt="" className="w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 shrink-0" />
-            Hamas Akram<span className="text-red-500">.</span>
+            Hamas Akram<span className="text-[#F9161D]">.</span>
           </a>
         </div>
 
@@ -106,7 +106,7 @@ const Navbar = () => {
             >
               {link}
               {/* Smooth hover underline */}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F9161D] transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
@@ -148,7 +148,7 @@ const Navbar = () => {
       {/* Mobile Slide-Down Menu */}
       <div 
         className={`md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-[32rem] py-4 opacity-100 bg-[#ff2a2a] shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
+          isOpen ? 'max-h-[32rem] py-4 opacity-100 bg-[#F9161D] shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
         }`}
       >
         <div className="flex flex-col px-6 space-y-4">
@@ -168,7 +168,7 @@ const Navbar = () => {
                target="_blank" 
                rel="noreferrer"
                onClick={() => setIsOpen(false)} 
-               className="inline-block px-6 py-3 rounded-full bg-white/10 text-white border border-white/20 font-black hover:bg-white hover:text-[#ff2a2a] transition-colors w-full text-center shadow-lg"
+               className="inline-block px-6 py-3 rounded-full bg-white/10 text-white border border-white/20 font-black hover:bg-white hover:text-[#F9161D] transition-colors w-full text-center shadow-lg"
              >
                GitHub
              </a>
@@ -177,14 +177,14 @@ const Navbar = () => {
                target="_blank" 
                rel="noreferrer"
                onClick={() => setIsOpen(false)} 
-               className="inline-block px-6 py-3 rounded-full bg-white/10 text-white border border-white/20 font-black hover:bg-white hover:text-[#ff2a2a] transition-colors w-full text-center shadow-lg"
+               className="inline-block px-6 py-3 rounded-full bg-white/10 text-white border border-white/20 font-black hover:bg-white hover:text-[#F9161D] transition-colors w-full text-center shadow-lg"
              >
                LinkedIn
              </a>
              <a 
                href="#contact" 
                onClick={() => setIsOpen(false)} 
-               className="inline-block px-6 py-3 rounded-full bg-white text-[#ff2a2a] font-black hover:bg-black hover:text-white transition-colors w-full text-center shadow-lg"
+               className="inline-block px-6 py-3 rounded-full bg-white text-[#F9161D] font-black hover:bg-black hover:text-white transition-colors w-full text-center shadow-lg"
              >
                Hire Me
              </a>

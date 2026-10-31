@@ -12,7 +12,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="bg-[#F52222] pt-12 pb-16 px-4 w-full relative overflow-hidden font-sans"
+        className="bg-[#F9161D] pt-12 pb-16 px-4 w-full relative overflow-hidden font-sans"
       >
         {/* Background Glow Effects - hidden on mobile, visible on larger screens */}
         <div className="hidden md:block absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-black/10 rounded-full blur-3xl"></div>
@@ -57,7 +57,7 @@ const About = () => {
               Hello! 👋
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl font-bold mb-4 md:mb-6 leading-relaxed text-red-50">
+            <p className="text-base sm:text-lg md:text-xl font-bold mb-4 md:mb-6 leading-relaxed text-white/90">
               I'm{' '}
               <span className="text-black text-lg sm:text-xl md:text-2xl font-black inline-block mx-1 tracking-wide uppercase">
                 Hamas Akram
@@ -65,12 +65,12 @@ const About = () => {
               , an NDT IT student at the University of Moratuwa, Sri Lanka.
             </p>
 
-            <p className="text-sm sm:text-base md:text-lg font-medium mb-4 md:mb-6 leading-relaxed text-red-50">
+            <p className="text-sm sm:text-base md:text-lg font-medium mb-4 md:mb-6 leading-relaxed text-white/90">
               Alongside my studies, I run a small online business called{' '}
               <span className="text-black font-black">Topbins</span>.
             </p>
 
-            <p className="text-sm sm:text-base md:text-lg font-medium mb-6 md:mb-8 leading-relaxed text-red-50">
+            <p className="text-sm sm:text-base md:text-lg font-medium mb-6 md:mb-8 leading-relaxed text-white/90">
               My toolkit includes HTML, CSS, Java, Python, Spring Boot, React,
               Node.js, and MongoDB.
             </p>

@@ -112,7 +112,7 @@ const ProjectCard = ({ project, index }) => {
               href={project.demo}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#ff2a2a]/10 border border-[#ff2a2a]/30 text-red-400 text-xs font-bold hover:bg-[#ff2a2a] hover:text-white hover:border-[#ff2a2a] transition-all"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F9161D]/10 border border-[#F9161D]/30 text-[#F9161D] text-xs font-bold hover:bg-[#F9161D] hover:text-white hover:border-[#F9161D] transition-all"
             >
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -124,7 +124,7 @@ const ProjectCard = ({ project, index }) => {
       </div>
 
       {/* Hover accent bar */}
-      <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#ff2a2a] scale-y-0 group-hover:scale-y-100 origin-center transition-transform duration-400 rounded-full" />
+      <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#F9161D] scale-y-0 group-hover:scale-y-100 origin-center transition-transform duration-400 rounded-full" />
     </motion.div>
   );
 };
@@ -148,8 +148,8 @@ const Projects = () => {
       className="bg-[#0b0b0b] w-full py-20 md:py-28 px-6 md:px-12 border-t border-zinc-900 font-sans relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff06_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none" />
-      <div className="absolute top-0 left-1/4 w-[400px] h-[250px] bg-[#ff2a2a]/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[350px] h-[250px] bg-[#ff2a2a]/4 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-[400px] h-[250px] bg-[#F9161D]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[350px] h-[250px] bg-[#F9161D]/4 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
@@ -166,14 +166,14 @@ const Projects = () => {
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.1]">
-                Things I&apos;ve built<span className="text-[#ff2a2a]">.</span>
+                Things I&apos;ve built<span className="text-[#F9161D]">.</span>
               </h2>
               <p className="text-zinc-400 text-sm max-w-lg mt-3 leading-relaxed">
                 Real-world projects built during my studies � full-stack apps, management systems, and web platforms.
               </p>
             </div>
             <div className="flex items-center gap-2 shrink-0">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#ff2a2a] animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#F9161D] animate-pulse" />
               <span className="text-xs text-zinc-500 font-bold uppercase tracking-widest">
                 {PROJECTS.length} Projects
               </span>
