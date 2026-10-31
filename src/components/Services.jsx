@@ -176,7 +176,7 @@ const Services = () => {
           <TagCard 
             number="01"
             title="Web Development"
-            text="Learning modern web technologies including React.js, JavaScript, HTML/CSS, and Node.js to build functional and responsive applications."
+            text="Building modern, responsive web applications using React.js, JavaScript, HTML, CSS, PHP, Java, and MySQL, with a focus on creating functional and user-friendly digital experiences."
             className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
             aosType="fade-left"
             aosDelay="100"

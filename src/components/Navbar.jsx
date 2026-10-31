@@ -59,7 +59,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const navLinks = ['Home', 'About', 'Education', 'Services', 'Contact'];
+  const navLinks = ['Home', 'About', 'Education', 'Services', 'Projects', 'Contact'];
 
   // Text turns black when over a white/light section (unless mobile menu is open with red background)
   const isDarkText = isLightSection && !isOpen;
